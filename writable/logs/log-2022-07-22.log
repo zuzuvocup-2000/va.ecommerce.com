@@ -1,0 +1,78 @@
+CRITICAL - 2022-07-22 21:07:46 --> Unable to connect to the database.
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT `keyword...', Array, false)
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Models\AutoloadModel.php(76): CodeIgniter\Database\BaseBuilder->get()
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Helpers\mydatafrontend_helper.php(166): App\Models\AutoloadModel->_get_where(Array, true)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\FrontendController.php(27): get_general('vi')
+#5 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(891): App\Controllers\FrontendController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#7 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-22 21:28:42 --> Undefined variable: module
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 23, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 21:28:59 --> Undefined variable: select_media
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 25, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 21:29:05 --> Undefined variable: module
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 26, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 21:33:33 --> syntax error, unexpected 'object' (T_STRING), expecting ')'
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('backend/transla...')
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('backend/transla...')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 21:34:31 --> Undefined variable: module
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 45, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 21:34:47 --> Undefined variable: module
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 60, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 21:45:38 --> syntax error, unexpected ':'
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('backend/transla...', Array, true)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Views\backend\dashboard\layout\home.php(44): view('backend/transla...')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\View\View.php(246): include('G:\\DoAnTotNghie...')
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('backend/dashboa...', Array, true)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(119): view('backend/dashboa...', Array)
+#5 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#6 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#7 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-22 21:56:37 --> Undefined variable: module
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 63, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-22 22:19:19 --> Undefined variable: module
+#0 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Catalogue.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\DoAnTotNghie...', 63, Array)
+#1 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Catalogue->index(25, 'en')
+#2 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Catalogue))
+#3 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\DoAnTotNghiep\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#5 {main}

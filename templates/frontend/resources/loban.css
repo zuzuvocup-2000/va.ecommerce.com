@@ -1,0 +1,29 @@
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    outline: 0;
+}
+*:focus,
+*:after:focus,
+*:before:focus {
+    outline: 0;
+}
+*:after,
+*:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    margin-top: 0;
+}
+.content{
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+}
