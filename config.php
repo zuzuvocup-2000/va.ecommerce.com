@@ -21,5 +21,5 @@ define('HTMAP', 'contact-map');
 
 define('HTDBHOST', 'localhost');
 define('HTDBUSER', 'root');
-define('HTDBPASS', '');
+define('HTDBPASS', 'root');
 define('HTDBNAME', 'ecommerce_data');

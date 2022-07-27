@@ -104,19 +104,6 @@ if($get_catalogue['content'] == 'silo'){
 				</div>
 			</div>
 		</div>
-		
-		<div class="ibox mb20 ">
-			<div class="ibox-title">Ưu đãi Shock</div>
-			<div class="ibox-content">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="form-row form-description">
-							<?php echo form_textarea('shock', htmlspecialchars_decode(html_entity_decode(set_value('shock', (isset($product['shock'])) ? $product['shock'] : ''))), 'class="form-control ck-editor" id="shock" placeholder="" autocomplete="off"');?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="ibox ibox-seo mb20">
 			<div class="ibox-title">
 				<div class="uk-flex uk-flex-middle uk-flex-space-between">

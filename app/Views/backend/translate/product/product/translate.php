@@ -39,6 +39,16 @@
 					</div>
 					<div class="row mb15">
 						<div class="col-lg-12">
+							<div class="form-row">
+								<label class="control-label text-left">
+									<span>Xuất xứ</span>
+								</label>
+								<?php echo form_input('made_in', validate_input(set_value('made_in', (isset($object['made_in'])) ? $object['made_in'] : '')), 'class="form-control " placeholder="" readonly autocomplete="off"'); ?>
+							</div>
+						</div>
+					</div>
+					<div class="row mb15">
+						<div class="col-lg-12">
 							<div class="form-row form-description">
 								<div class="uk-flex uk-flex-middle uk-flex-space-between">
 									<label class="control-label text-left">
@@ -60,6 +70,24 @@
 								<?php echo form_textarea('content', htmlspecialchars_decode(html_entity_decode(set_value('content', (isset($object['content'])) ? base64_decode($object['content']) : ''))), 'disabled class="form-control ck-editor" id="content" placeholder="" autocomplete="off"');?>
 							</div>
 						</div>
+					</div>
+					<div class="row">
+						<?php if(isset($object['sub_title']) && is_array($object['sub_title']) && count($object['sub_title'])){ ?>
+						<?php foreach ($object['sub_title'] as $key => $value) {?>
+							<?php $id = slug($value) ?>
+							<div class="col-lg-12 m-b desc-more">
+								<div class="row m-b">
+									<div class="col-lg-12">
+										<input type="text" name="sub_content[title][]" class="form-control" value="<?php echo $value ?>" placeholder="Tiêu đề" readonly>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12" >
+										<textarea  name="sub_content[description][]" class="form-control ck-editor" id="<?php echo $id ?>" placeholder="Mô tả" readonly><?php echo $object['sub_content'][$key] ?></textarea>
+									</div>
+								</div>
+							</div>
+						<?php }} ?>
 					</div>
 				</div>
 			</div>
@@ -113,6 +141,16 @@
 						</div>
 						<div class="row mb15">
 							<div class="col-lg-12">
+								<div class="form-row">
+									<label class="control-label text-left">
+										<span>Xuất xứ</span>
+									</label>
+									<?php echo form_input('made_in', validate_input(set_value('made_in', (isset($translate['made_in'])) ? $translate['made_in'] : '')), 'class="form-control " placeholder=""  autocomplete="off"'); ?>
+								</div>
+							</div>
+						</div>
+						<div class="row mb15">
+							<div class="col-lg-12">
 								<div class="form-row form-description">
 									<div class="uk-flex uk-flex-middle uk-flex-space-between">
 										<label class="control-label text-left">
@@ -124,8 +162,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="row mb15">
-							<div class="col-lg-12">
+						<div class="row ">
+							<div class="col-lg-12 mb15">
 								<div class="form-row">
 									<div class="uk-flex uk-flex-middle uk-flex-space-between">
 										<label class="control-label text-left">
@@ -134,6 +172,14 @@
 										<a href="" title="" data-target="content_translate" class="uploadMultiImage">Upload hình ảnh</a>
 									</div>
 									<?php echo form_textarea('content', htmlspecialchars_decode(html_entity_decode(set_value('content', (isset($translate['content'])) ? base64_decode($translate['content']) : ''))), 'class="form-control ck-editor" id="content_translate" placeholder="" autocomplete="off"');?>
+								</div>
+							</div>
+							<div class="col-lg-12">	
+								<div class="uk-flex uk-flex-middle uk-flex-space-between">
+									<label class="control-label text-left ">
+										<span>Nội dung mở rộng</span>
+									</label>
+									<a href="" title="" class="add-attr" onclick="return false;">Thêm nội dung +</a>
 								</div>
 							</div>
 						</div>

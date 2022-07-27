@@ -518,13 +518,12 @@ class Product extends BaseController{
 			'canonical' => slug($this->request->getPost('canonical')),
 			'made_in' => $this->request->getPost('made_in'),
 			'video' => $this->request->getPost('video'),
-			'shock' => $this->request->getPost('shock'),
 			'sub_album_title' => json_encode($this->request->getPost('sub_album_title'),TRUE),
 			'content' => base64_encode($this->request->getPost('content')),
 			'description' => base64_encode($this->request->getPost('description')),
 			'meta_title' => validate_input($this->request->getPost('meta_title')),
 			'meta_description' => validate_input($this->request->getPost('meta_description')),
- 			'brand' => json_encode($this->request->getPost('brand'), TRUE),
+ 			// 'brand' => json_encode($this->request->getPost('brand'), TRUE),
 			'language' => $this->currentLanguage(),
 			'module' => $this->data['module'],
 		];
@@ -818,7 +817,7 @@ class Product extends BaseController{
 	private function get_data_module($id = 0){
 		$session = session();
 		$flag = $this->AutoloadModel->_get_where([
-			'select' => 'tb1.id, tb1.catalogue,tb1.time_end,tb1.sub_album,tb2.sub_album_title,tb2.video,tb2.shock, tb1.bar_code, tb1.brandid, tb1.catalogueid, tb1.model, tb1.price_promotion, tb1.price, tb1.productid, tb1.id, tb1.id, tb1.id, tb2.title, tb2.objectid, tb2.sub_title, tb2.sub_content, tb2.description, tb2.canonical,  tb2.content, tb2.meta_title, tb2.meta_description, tb1.album, tb1.publish, tb2.made_in, tb1.productid_original, tb1.articleid, tb1.icon, tb2.type, tb1.hinhthuc, tb2.huong, tb2.info, tb1.length, tb1.width, tb2.brand',
+			'select' => 'tb1.id, tb1.catalogue,tb1.time_end,tb1.sub_album,tb2.sub_album_title,tb2.video, tb1.bar_code, tb1.brandid, tb1.catalogueid, tb1.model, tb1.price_promotion, tb1.price, tb1.productid, tb1.id, tb1.id, tb1.id, tb2.title, tb2.objectid, tb2.sub_title, tb2.sub_content, tb2.description, tb2.canonical,  tb2.content, tb2.meta_title, tb2.meta_description, tb1.album, tb1.publish, tb2.made_in, tb1.productid_original, tb1.articleid, tb1.icon, tb2.info, ',
 			'table' => $this->data['module'].' as tb1',
 			'join' =>  [
 				[
@@ -834,7 +833,6 @@ class Product extends BaseController{
 			$flag['description'] = base64_decode($flag['description']);
 			$flag['sub_title'] = json_decode(base64_decode($flag['sub_title']));
 			$flag['info'] = json_decode($flag['info'],true);
-			$flag['brand'] = json_decode($flag['brand'],true);
 			$flag['sub_content'] = json_decode(base64_decode($flag['sub_content']));
 		}
 		return $flag;

@@ -1,0 +1,28 @@
+CRITICAL - 2022-07-27 03:13:14 --> Undefined variable: object
+#0 D:\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Product.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\OpenServer\\d...', 146, Array)
+#1 D:\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Translate\Product\Product.php(33): App\Controllers\Backend\Translate\Product\Product->data_translate(35, 'en')
+#2 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Translate\Product\Product->index(35, 'en')
+#3 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Translate\Product\Product))
+#4 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-07-27 03:19:52 --> Undefined index: brand
+#0 D:\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Product\Product.php(836): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\OpenServer\\d...', 836, Array)
+#1 D:\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Product\Product.php(197): App\Controllers\Backend\Product\Product->get_data_module(35)
+#2 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Product\Product->update(35)
+#3 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Product\Product))
+#4 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-07-27 03:22:04 --> Unknown column 'brand' in 'field list'
+#0 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `product...')
+#1 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 D:\OpenServer\domains\va.ecommerce.com\app\Models\AutoloadModel.php(105): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\OpenServer\domains\va.ecommerce.com\app\Controllers\Backend\Product\Product.php(234): App\Models\AutoloadModel->_update(Array)
+#6 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Backend\Product\Product->update(35)
+#7 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Product\Product))
+#8 D:\OpenServer\domains\va.ecommerce.com\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\OpenServer\domains\va.ecommerce.com\index.php(48): CodeIgniter\CodeIgniter->run()
+#10 {main}
