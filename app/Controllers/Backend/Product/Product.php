@@ -133,7 +133,7 @@ class Product extends BaseController{
 
 			 		if($resultid > 0){
 			 			$storeLanguage = $this->storeLanguage($resultid);
-			 			$storeLanguage = $this->convert_content($sub_content, $storeLanguage);
+			 			$storeLanguage = convert_content($sub_content, $storeLanguage);
 						$this->version($resultid, 'create');
 						$this->AutoloadModel->_insert([
 							'table' => 'product_translate',
@@ -220,7 +220,7 @@ class Product extends BaseController{
 				$wholesale = $this->request->getPost('wholesale');
 		 		$update = $this->store(['method' => 'update']);
 		 		$updateLanguage = $this->storeLanguage($id);
-		 		$updateLanguage = $this->convert_content($sub_content, $updateLanguage);
+		 		$updateLanguage = convert_content($sub_content, $updateLanguage);
 		 		$flag = $this->AutoloadModel->_update([
 		 			'table' => $this->data['module'],
 		 			'where' => ['id' => $id],
@@ -618,28 +618,6 @@ class Product extends BaseController{
 		return [
 			'select' => $select,
 		];
-	}
-
-	private function convert_content($content = [], $store = []){
-		$count_1 = 0;
-		$count_2 = 0;
-		if($content != []){
-			foreach ($content['title'] as $key => $value) {
-	 			$title[] = $content['title'][$count_1];
-	 			$count_1++;
-	 		}
-	 		foreach ($content['title'] as $key => $value) {
-	 			$description[] = $content['description'][$count_2];
-	 			$count_2++;
-	 		}
-	 		$title = base64_encode(json_encode($title));
-	 		$description = base64_encode(json_encode($description));
-	 		$store['sub_title'] = $title;
-	 		$store['sub_content'] = $description;
-			return $store;
-		}else{
-			return $store;
-		}
 	}
 
 	private function export_brand(){

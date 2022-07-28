@@ -99,19 +99,22 @@ class Product extends BaseController
 			'title' => validate_input($this->request->getPost('title')),
 			'canonical' => slug($this->request->getPost('canonical')),
 			'description' => base64_encode($this->request->getPost('description')),
+			'made_in' => base64_encode($this->request->getPost('made_in')),
 			'content' => base64_encode($this->request->getPost('content')),
 			'meta_title' => validate_input($this->request->getPost('meta_title')),
 			'meta_description' => validate_input($this->request->getPost('meta_description')),
 			'language' => $language,
 			'module' => $this->data['module'],
 		];
+		$sub_content = $this->request->getPost('sub_content');
+		$store = convert_content($sub_content, $store);
 		return $store;
 	}
 
 	private function data_current_language($objectid = 0, $language = 'vi'){
 		$moduleExtract = explode('_', $this->data['module']);
 		$object = $this->AutoloadModel->_get_where([
-			'select' => 'tb1.id, tb2.title, tb2.canonical, tb2.description, tb2.content, tb2.meta_title, tb2.meta_description , tb2.sub_title, tb2.sub_content,',
+			'select' => 'tb1.id, tb2.title, tb2.canonical, tb2.description, tb2.content, tb2.meta_title, tb2.meta_description , tb2.sub_title, tb2.sub_content, tb2.made_in',
 			'table' => $this->data['module'].' as tb1',
 			'join' => [
 				[
@@ -135,7 +138,7 @@ class Product extends BaseController
 	private function data_translate($objectid = 0, $language = 'vi'){
 		$moduleExtract = explode('_', $this->data['module']);
 		$translate = $this->AutoloadModel->_get_where([
-			'select' => 'tb1.id, tb2.title, tb2.canonical, tb2.description, tb2.content, tb2.meta_title, tb2.meta_description',
+			'select' => 'tb1.id, tb2.title, tb2.canonical, tb2.description, tb2.content, tb2.meta_title, tb2.meta_description , tb2.sub_title, tb2.sub_content, tb2.made_in',
 			'table' => $this->data['module'].' as tb1',
 			'join' => [
 				[

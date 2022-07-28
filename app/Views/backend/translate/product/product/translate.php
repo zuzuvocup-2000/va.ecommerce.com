@@ -183,6 +183,46 @@
 								</div>
 							</div>
 						</div>
+
+					</div>
+				</div>
+				<div class="ibox">
+					<div class="row" id="sortable-view">
+						<div class="col-lg-12 ui-sortable attr-more">
+							<?php if(isset($translate['sub_title']) && is_array($translate['sub_title']) && count($translate['sub_title'])){ ?>
+							<?php foreach ($translate['sub_title'] as $key => $value) {?>
+							<?php $id = slug($value) ?>
+							<div class="ibox desc-more" style="opacity: 1;">
+								<div class="ibox-title ui-sortable-handle ">
+									<div class="uk-flex uk-flex-middle row">
+										<div class="col-lg-8">
+											<input type="text" name="sub_content[title][]" class="form-control" value="<?php echo $value ?>" placeholder="Tiêu đề">
+										</div>
+										<div class="col-lg-4">
+											<div class="uk-flex uk-flex-middle uk-flex-space-between">
+												<a href="" title="" data-target="translate_<?php echo $id ?>" class="uploadMultiImage">Upload hình ảnh</a>
+												<div class="ibox-tools">
+													<a class="collapse-link ui-sortable">
+														<i class="fa fa-chevron-up"></i>
+													</a>
+													<a class="close-link">
+														<i class="fa fa-times"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ibox-content" style="">
+									<div class="row">
+										<div class="col-lg-12" >
+											<textarea name="sub_content[description][]" class="form-control ck-editor" id="translate_<?php echo $id ?>" placeholder="Mô tả"><?php echo $translate['sub_content'][$key] ?></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?php }} ?>
+						</div>
 					</div>
 				</div>
 				<div class="ibox ibox-seo mb20">

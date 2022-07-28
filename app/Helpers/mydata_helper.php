@@ -596,5 +596,28 @@ if (!function_exists('dt_menu_recursive')) {
 		return $html;
 	}
 }
+if (!function_exists('convert_content')) {
+	function convert_content($content = [], $store = []){
+		$count_1 = 0;
+		$count_2 = 0;
+		if($content != []){
+			foreach ($content['title'] as $key => $value) {
+	 			$title[] = $content['title'][$count_1];
+	 			$count_1++;
+	 		}
+	 		foreach ($content['title'] as $key => $value) {
+	 			$description[] = $content['description'][$count_2];
+	 			$count_2++;
+	 		}
+	 		$title = base64_encode(json_encode($title));
+	 		$description = base64_encode(json_encode($description));
+	 		$store['sub_title'] = $title;
+	 		$store['sub_content'] = $description;
+			return $store;
+		}else{
+			return $store;
+		}
+	}
+}
 
 ?>
